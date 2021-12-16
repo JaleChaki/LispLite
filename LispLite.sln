@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LispLite.Core", "LispLite.Core\LispLite.Core.csproj", "{4B547A16-5D6E-446D-9CB0-ABE4B8788080}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LispLite.Core.Tests", "LispLite.Core.Tests\LispLite.Core.Tests.csproj", "{C6BF7D6A-A914-4AAC-9F76-2C970B501074}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B547A16-5D6E-446D-9CB0-ABE4B8788080}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B547A16-5D6E-446D-9CB0-ABE4B8788080}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B547A16-5D6E-446D-9CB0-ABE4B8788080}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B547A16-5D6E-446D-9CB0-ABE4B8788080}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6BF7D6A-A914-4AAC-9F76-2C970B501074}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6BF7D6A-A914-4AAC-9F76-2C970B501074}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6BF7D6A-A914-4AAC-9F76-2C970B501074}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6BF7D6A-A914-4AAC-9F76-2C970B501074}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {73AE51C4-A856-484F-AD7E-18D29ABBA054}
+	EndGlobalSection
+EndGlobal
