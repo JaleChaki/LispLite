@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Reflection;
 using Xunit.Sdk;
 
-namespace LispLiteTests.Utils {
+namespace LispLite.Tests.Utils {
 	internal class ReplaceCultureAttribute : BeforeAfterTestAttribute {
 
 		public string CultureName { get; set; } = "en-us";

@@ -1,20 +1,20 @@
 ﻿using LispLite.Runtime;
 
 namespace LispLite.Operators {
-	public class VariableOperator<T> : ILispOperator {
+	public class VariableDeclareOperator<T> : ILispOperator {
 
 		public string Name { get; }
 
 		private readonly ILispOperator PrimaryValueSetter;
 
-		public VariableOperator(string name, ILispOperator primaryValueSetter) {
+		public VariableDeclareOperator(string name, ILispOperator primaryValueSetter) {
 			Name = name;
 			PrimaryValueSetter = primaryValueSetter;
 		}
 
 		public object Evaluate(IRuntime runtime) {
-			T value = (T)PrimaryValueSetter.Evaluate(runtime);
-			runtime.DeclareVariable<T>(Name, value);
+			var value = PrimaryValueSetter?.Evaluate(runtime);
+			runtime.DeclareVariable(Name, value);
 			return value;
 		}
 	}

@@ -21,7 +21,7 @@ namespace LispLite.Syntax.Compilers {
 			SupportedTypes.Add("string", typeof(string));
 
 			SyntaxNodeCompilers = new List<ILispSyntaxNodeCompiler> {
-				new VariableDeclarationCompiler(),
+				new VariableDeclareOperatorCompiler(),
 				new ConstantOperatorCompiler(),
 				new ArithmeticOperatorCompiler(),
 				new LogicalOperatorCompiler(),
@@ -29,13 +29,21 @@ namespace LispLite.Syntax.Compilers {
 				new ComparisonOperatorCompiler(),
 				new VariableAccessCompiler(),
 				new WhileOperatorCompiler(),
-				new SequenceOperatorCompiler()
+				new SequenceOperatorCompiler(),
+				new AssignOperatorCompiler(),
+				new MakeArrayOperatorCompiler()
 			};
 
 			DeclaredVariables = new List<string>();
 		}
 
 		public Type GetTypeByDeclaration(string name) {
+			if (name.StartsWith("array<") && name.EndsWith(">")) {
+				var arrayType = name.Substring("array<".Length, name.Length - "array<".Length - 1);
+
+				return typeof(List<>).MakeGenericType(GetTypeByDeclaration(arrayType));
+			}
+
 			return SupportedTypes.TryGetValue(name, out Type result) ? result : null;
 		}
 

@@ -1,8 +1,7 @@
 ﻿using System;
-using LispLite;
 using Xunit;
 
-namespace LispLiteTests.Operators {
+namespace LispLite.Tests.Operators {
 	public class ComparisonOperatorTests {
 
 		[Theory]

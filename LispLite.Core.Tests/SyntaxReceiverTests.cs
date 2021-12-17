@@ -1,9 +1,8 @@
 ﻿using System.Linq;
-using LispLite;
 using LispLite.Syntax;
 using Xunit;
 
-namespace LispLiteTests {
+namespace LispLite.Tests {
 	public class SyntaxReceiverTests {
 
 		[Fact]

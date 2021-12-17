@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using LispLite;
 using LispLite.Runtime;
 using LispLite.Syntax;
 using LispLite.Syntax.Compilers;
 using Xunit;
 
-namespace LispLiteTests.Operators {
+namespace LispLite.Tests.Operators {
 	public class LogicalOperatorTests {
 
 		[Theory]

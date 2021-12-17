@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using LispLite;
 using LispLite.Runtime;
 using Xunit;
 
-namespace LispLiteTests.Operators {
+namespace LispLite.Tests.Operators {
 	public class SequenceOperatorTests {
 
 		[Fact]

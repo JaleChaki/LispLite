@@ -1,8 +1,6 @@
-﻿using LispLite;
-using LispLiteTests.Utils;
-using Xunit;
+﻿using Xunit;
 
-namespace LispLiteTests.Operators {
+namespace LispLite.Tests.Operators {
 	public class ArithmeticOperatorTests {
 
 		[Theory]
