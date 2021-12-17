@@ -19,6 +19,7 @@ namespace LispLite.Syntax.Compilers {
 			SupportedTypes.Add("int", typeof(int));
 			SupportedTypes.Add("double", typeof(double));
 			SupportedTypes.Add("string", typeof(string));
+			SupportedTypes.Add("bool", typeof(bool));
 
 			SyntaxNodeCompilers = new List<ILispSyntaxNodeCompiler> {
 				new VariableDeclareOperatorCompiler(),

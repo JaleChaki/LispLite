@@ -12,6 +12,7 @@ namespace LispLite.Tests.Operators {
 		[InlineData("(int A 10)", typeof(int), "10")]
 		[InlineData("(string A \"abc\")", typeof(string), "\"abc\"")]
 		[InlineData("(double A 2.4)", typeof(double), "2.4")]
+		[InlineData("(bool A true)", typeof(bool), "true")]
 		[InlineData("(array<double> A (makearray double 1.0))", typeof(List<double>), "[1.0]")]
 		[InlineData("(array<array<int>> A (makearray array<int> (makearray int 1)))", typeof(List<List<int>>), "[[1]]")]
 		public void Test(string rawCode, Type expectedType, object expectedValueJson) {
