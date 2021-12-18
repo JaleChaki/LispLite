@@ -13,6 +13,15 @@ namespace LispLite.Tests.Utils {
 
 		public class InternalDataItem {
 
+			public InternalDataItem() {
+
+			}
+
+			public InternalDataItem(int a, int b) {
+				InternalProperty = a;
+				InternalField = b;
+			}
+
 			public int InternalProperty { get; set; }
 
 			public int InternalField;
