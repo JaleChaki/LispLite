@@ -10,6 +10,7 @@ namespace LispLite.Tests.Operators {
 
 		[Theory]
 		[InlineData("(int A 10)", typeof(int), "10")]
+		[InlineData("(int A)", typeof(int), "0")]
 		[InlineData("(string A \"abc\")", typeof(string), "\"abc\"")]
 		[InlineData("(double A 2.4)", typeof(double), "2.4")]
 		[InlineData("(bool A true)", typeof(bool), "true")]

@@ -14,7 +14,7 @@ namespace LispLite.Operators {
 
 		public object Evaluate(IRuntime runtime) {
 			var value = PrimaryValueSetter?.Evaluate(runtime);
-			runtime.DeclareVariable(Name, value);
+			runtime.DeclareVariable(Name, value ?? default(T));
 			return value;
 		}
 	}
