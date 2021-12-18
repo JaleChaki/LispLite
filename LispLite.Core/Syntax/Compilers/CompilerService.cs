@@ -10,9 +10,9 @@ namespace LispLite.Syntax.Compilers {
 		public ICollection<ILispSyntaxNodeCompiler> SyntaxNodeCompilers { get; }
 
 		/// <summary>
-		/// names of variables, declared during compilation
+		/// names of variables (and marks local/global), declared during compilation
 		/// </summary>
-		public ICollection<string> DeclaredVariables { get; }
+		private IDictionary<string, bool> DeclaredVariables { get; }
 
 		public CompilerService(IDictionary<string, Type> supportedTypes) {
 			SupportedTypes = supportedTypes;
@@ -34,10 +34,11 @@ namespace LispLite.Syntax.Compilers {
 				new AssignOperatorCompiler(),
 				new MakeArrayOperatorCompiler(),
 				new ArrayItemAccessOperatorCompiler(),
-				new ArrayItemSetOperatorCompiler()
+				new ArrayItemSetOperatorCompiler(),
+				new ForOperatorCompiler()
 			};
 
-			DeclaredVariables = new List<string>();
+			DeclaredVariables = new Dictionary<string, bool>();
 		}
 
 		public Type GetTypeByDeclaration(string name) {
@@ -48,6 +49,19 @@ namespace LispLite.Syntax.Compilers {
 			}
 
 			return SupportedTypes.TryGetValue(name, out Type result) ? result : null;
+		}
+
+		public bool HasVariable(string name) {
+			return DeclaredVariables.ContainsKey(name);
+		}
+
+		public bool CanDeclareVariable(string name) {
+			// not declared earlier, or it's local variable
+			return !DeclaredVariables.ContainsKey(name) || !DeclaredVariables[name];
+		}
+
+		public void DeclareVariable(string name, bool isGlobal = true) {
+			DeclaredVariables[name] = isGlobal;
 		}
 
 		public ILispOperator Compile(SyntaxNode node) {

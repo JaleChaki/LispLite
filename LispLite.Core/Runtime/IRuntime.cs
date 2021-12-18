@@ -9,6 +9,8 @@
 
 		void SetVariableValue(string name, object value);
 
+		void FreeVariable(string name);
+
 		T GetVariableValue<T>(string name);
 
 		object GetVariableValue(string name);

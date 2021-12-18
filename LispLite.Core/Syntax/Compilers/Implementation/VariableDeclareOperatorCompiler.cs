@@ -21,10 +21,10 @@ namespace LispLite.Syntax.Compilers.Implementation {
 			if (variableType == null) {
 				return false;
 			}
-			if(compiler.DeclaredVariables.Contains(nameDeclarationLabel.Label)) {
+			if(!compiler.CanDeclareVariable(nameDeclarationLabel.Label)) {
 				throw new ArgumentException("Variable already exists");
 			}
-			compiler.DeclaredVariables.Add(nameDeclarationLabel.Label);
+			compiler.DeclareVariable(nameDeclarationLabel.Label);
 			result = Activator.CreateInstance(
 					typeof(VariableDeclareOperator<>).MakeGenericType(variableType),
 					nameDeclarationLabel.Label,

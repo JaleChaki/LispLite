@@ -9,7 +9,7 @@ namespace LispLite.Syntax.Compilers.Implementation {
 			if (node is not LabelNode labelNode || labelNode.IsString) {
 				return false;
 			}
-			if (compiler.DeclaredVariables.Contains(labelNode.Label)) {
+			if (compiler.HasVariable(labelNode.Label)) {
 				result = new VariableAccessOperator(labelNode.Label);
 				return true;
 			}

@@ -16,18 +16,25 @@ namespace LispLite.Runtime {
 			return (T)GetVariableValue(name);
 		}
 
+		public void FreeVariable(string name) {
+			EnsureVariableExists(name);
+			Variables.Remove(name);
+		}
+
 		public object GetVariableValue(string name) {
-			if (!Variables.ContainsKey(name)) {
-				throw new ArgumentException($"Variable {name} not exists");
-			}
+			EnsureVariableExists(name);
 			return Variables[name];
 		}
 
 		public void SetVariableValue(string name, object value) {
+			EnsureVariableExists(name);
+			Variables[name] = value;
+		}
+
+		private void EnsureVariableExists(string name) {
 			if (!Variables.ContainsKey(name)) {
 				throw new ArgumentException($"Variable {name} not exists");
 			}
-			Variables[name] = value;
 		}
 	}
 }
