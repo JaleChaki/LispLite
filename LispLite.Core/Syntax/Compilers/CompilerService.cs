@@ -5,7 +5,7 @@ using LispLite.Syntax.Compilers.Implementation;
 namespace LispLite.Syntax.Compilers {
 	public class CompilerService {
 
-		private readonly IDictionary<string, Type> SupportedTypes;
+		public readonly IDictionary<string, Type> SupportedTypes;
 
 		public ICollection<ILispSyntaxNodeCompiler> SyntaxNodeCompilers { get; }
 

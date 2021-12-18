@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LispLite.Core", "LispLite.C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LispLite.Core.Tests", "LispLite.Core.Tests\LispLite.Core.Tests.csproj", "{C6BF7D6A-A914-4AAC-9F76-2C970B501074}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LispLite.Reflection", "LispLite.Reflection\LispLite.Reflection.csproj", "{B0580EF7-519A-40A6-8274-E515AB9C1319}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LispLite.Reflection.Tests", "LispLite.Reflection.Tests\LispLite.Reflection.Tests.csproj", "{23816F4A-613B-40F1-AD73-ED874C94A252}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{C6BF7D6A-A914-4AAC-9F76-2C970B501074}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6BF7D6A-A914-4AAC-9F76-2C970B501074}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6BF7D6A-A914-4AAC-9F76-2C970B501074}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0580EF7-519A-40A6-8274-E515AB9C1319}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0580EF7-519A-40A6-8274-E515AB9C1319}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0580EF7-519A-40A6-8274-E515AB9C1319}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0580EF7-519A-40A6-8274-E515AB9C1319}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23816F4A-613B-40F1-AD73-ED874C94A252}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23816F4A-613B-40F1-AD73-ED874C94A252}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23816F4A-613B-40F1-AD73-ED874C94A252}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23816F4A-613B-40F1-AD73-ED874C94A252}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
