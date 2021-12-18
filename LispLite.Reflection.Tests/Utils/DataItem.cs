@@ -19,5 +19,15 @@ namespace LispLite.Tests.Utils {
 
 		}
 
+		public DataItem() {
+
+		}
+
+		public DataItem(string property, string field, InternalDataItem item) {
+			Property = property;
+			Field = field;
+			Item = item;
+		}
+
 	}
 }

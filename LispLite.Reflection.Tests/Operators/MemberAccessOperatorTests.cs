@@ -2,7 +2,7 @@ using LispLite.Runtime;
 using LispLite.Tests.Utils;
 using Xunit;
 
-namespace LispLite.Tests {
+namespace LispLite.Tests.Operators {
 	public class MemberAccessOperatorTests {
 
 		[Fact]
@@ -18,7 +18,7 @@ namespace LispLite.Tests {
 		public void ComplexAccessField() => Test("(int A dataItem.Item.InternalField)", 456);
 
 		void Test(string rawCode, object expectedValue) {
-			var compiler = LispLiteReflectionCompiler.CreateNew();
+			var compiler = LispLiteReflectionCompiler.Create();
 			compiler.CompilerService.DeclareVariable("dataItem");
 			var code = compiler.Assemble(rawCode);
 			var runtime = new DefaultRuntime();

@@ -14,6 +14,9 @@ namespace LispLite.Syntax.Compilers.Implementation {
 			if(arguments[0] is not LabelNode labelNode || labelNode.IsString) {
 				return false;
 			}
+			if(!compiler.HasVariable(labelNode.Label)) {
+				return false;
+			}
 			result = new AssignOperator(labelNode.Label, compiler.Compile(arguments[1]));
 			return true;
 		}
