@@ -32,7 +32,9 @@ namespace LispLite.Syntax.Compilers {
 				new WhileOperatorCompiler(),
 				new SequenceOperatorCompiler(),
 				new AssignOperatorCompiler(),
-				new MakeArrayOperatorCompiler()
+				new MakeArrayOperatorCompiler(),
+				new ArrayItemAccessOperatorCompiler(),
+				new ArrayItemSetOperatorCompiler()
 			};
 
 			DeclaredVariables = new List<string>();
